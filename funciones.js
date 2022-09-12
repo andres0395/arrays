@@ -64,4 +64,8 @@ const beers =[{
     color:"blanco",
     fecha:2016
 }];
-console.log(beers.tipo);
+beers.forEach((i)=>console.log(i));
+const beer = beers.find(i => i.tipo);
+console.log(beer);
+let cerv = Object.keys(beer);
+console.log(cerv);
