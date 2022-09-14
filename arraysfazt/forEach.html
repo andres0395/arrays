@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const students =[
+    {name: 'John',
+     lastname :'doe',
+     age:'28',
+     course:'web development'
+    },
+    {name : " Jack " ,
+     lastname : " Doe " ,
+     age : 22 ,
+     course : " Accounting " ,
+    } ,
+    {name : " Ryan " ,
+     lastname : " Ray " ,
+     age : 20 ,
+     course : " Web Development "
+    },
+    ]
+    let stude
+    const fullname =[];
+    students.forEach(a =>{
+        console.log(a);
+        stude = Object.keys(a);
+        console.log(stude);
+        fullname.push(a.name + ' '+a.lastname);
+    });
+    console.log(fullname);
+    stude.forEach(b =>{
+        console.log(b);
+    });
+</script>
+</body>
+</html>

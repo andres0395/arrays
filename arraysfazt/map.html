@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="demo"></ul>
+<script>
+    const students =[
+    {name: 'John',
+     lastname :'doe',
+     age:28,
+     course:'web development'
+    },
+    {name : " Jack " ,
+     lastname : " Doe " ,
+     age : 22 ,
+     course : " Accounting " ,
+    } ,
+    {name : " Ryan " ,
+     lastname : " Ray " ,
+     age : 20 ,
+     course : " Web Development "
+    },
+    ]
+    const fullname = students.map(a=>{
+        return a.name + " " + a.lastname;
+    });
+    console.log(fullname);
+    let lista ='';
+    fullname.forEach(b=>{
+        lista += `
+        <li>${b}</li>
+        `
+        console.log(b);
+    })
+    document.getElementById('demo').innerHTML = lista;
+    const names = students.map(c=>{
+        return{
+            fullname: c.name + ' '+ c.lastname,
+            age: c.age,
+            course: c.course
+        }
+    })
+    console.log(names);
+    const names1 = students.map(d =>{
+        return {
+        fullname: d.name + ' '+ d.lastname,
+        age: d.age,
+        course: d.course,
+        title: `${d.name} ${d.course}}`
+        }
+    });
+    // este de abajo hace el mismo trabajo que el de arriba
+    console.log(names1);
+    const names2 = students.map(f =>
+    ({
+        ...f,
+        course: 'programing'
+    }));
+    console.log(names2);
+    // concatenacion de metodos
+    const names3 = students.map(f =>
+    ({
+        ...f,
+        course: 'programing'
+    })).map(f =>({
+        ...f,
+        age: f.age *2
+    })) 
+
+
+    console.log(names3);
+
+</script>
+</body>
+</html>
